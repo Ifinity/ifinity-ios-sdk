@@ -20,6 +20,7 @@
                                name:(NSString *)name
                               label:(NSString *)label
                                file:(NSString *)file
+                               data:(id)data
                             details:(id)details
                   managedObjectContext:(NSManagedObjectContext *)context;
 + (NSArray *) fetchAll;

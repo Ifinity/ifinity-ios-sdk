@@ -12,8 +12,11 @@
  *  Location object with extended description.
  */
 @interface IFLocation : CLLocation
+@property (nonatomic, copy) NSString *locationDescription;
 
-- (void) setDescription:(NSString *)description;
-- (NSString *) description;
+- (float)angleToLocation:(IFLocation *)second;
+
++ (float)angleFromCoordinate:(CLLocationCoordinate2D)first
+                toCoordinate:(CLLocationCoordinate2D)second;
 
 @end

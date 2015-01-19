@@ -7,17 +7,17 @@
 //
 
 #import <MapKit/MapKit.h>
-#import "IFTransmiter.h"
+#import "IFTransmitter.h"
 
 /**
- *  Special beacon annotation used to hold information about beacon and it's position. It's connected with the transmiter and used to calculate user position based on the beacon location.
+ *  Special beacon annotation used to hold information about beacon and it's position. It's connected with the transmitter and used to calculate user position based on the beacon location.
  */
 @interface IFBeaconAnnotation : NSObject <MKAnnotation>
 {
     CLLocationCoordinate2D coordinate;
 }
 
-@property (nonatomic) IFTransmiter *transmiter;
+@property (nonatomic) IFTransmitter *transmitter;
 
 - (id) initWithCoordinate:(CLLocationCoordinate2D)coord;
 - (void) setCoordinate:(CLLocationCoordinate2D)newCoordinate;

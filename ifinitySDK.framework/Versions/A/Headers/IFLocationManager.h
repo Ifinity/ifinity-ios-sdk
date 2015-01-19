@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MKMapView.h>
+#import "IFRouteDetails.h"
+#import "IFPolyline.h"
 
 @class IFLocationManager;
+
 /**
- *  Managers are the most important part of the application, you can get all the information about position, bluetooth data and content throught it's delegates.
+ *  Delegate for `IFLocationManager` class.
  */
 @protocol IFLocationManagerDelegate <NSObject>
 @optional
@@ -21,9 +24,13 @@
  *  @param heading Most recent heading
  */
 - (void)manager:(IFLocationManager *)manager headingChanged:(float)heading;
+
 @end
 
-
+/**
+ *  The `IFLocationManager` recives current user position and fetch nearby data (beacons, buildings). 
+ *  This class helped also in presenting data on the map.
+ */
 @interface IFLocationManager : NSObject <CLLocationManagerDelegate>
 
 /**
@@ -37,30 +44,6 @@
  *  @return IFLocationManager object
  */
 + (IFLocationManager *)sharedManager;
-
-/**
- *  Once we want to receive the heading updates
- *
- *  @return Success
- */
-- (BOOL) startUpdatingHeading;
-
-/**
- *  Once we don't need the heading updates any more
- *
- *  @return Success
- */
-- (BOOL) stopUpdatingHeading;
-
-/**
- *  Once we want to monitor SignificantLocationChanges, we're getting information about the beacons within the range of 100km, so we need to update this information once user travels from time to time
- */
-- (void) startMonitoringLocation;
-
-/**
- *  Ends monitoring, once the user leaves the application.
- */
-- (void) stopMonitoringLocation;
 
 /**
  *  MapKit allows to use maximum 21 level of zoom only. That's why we need to trick it a little bit with some translations.
@@ -111,8 +94,18 @@
 /**
  *  We need to monitor current user position in order to get nearby buildings and beacons. The position should be passed using updateCurrentLocation: method
  *
+ *  Caudution: Do not call this method to fast with almost this same values. This could cause strange problems with duplicated data in cache.
  *  @param location current user location
  */
 - (void)updateCurrentLocation:(CLLocation *)location;
 
+/**
+ *  Gets the information about the next node, current angle, and target distance, based on the pXy coordinate
+ *
+ *  @param pXy      Coordinate to snap
+ *  @param polyline Polyline we want to snap to
+ *
+ *  @return Route details
+ */
+- (IFRouteDetails *) coordinateClosestTo:(CLLocationCoordinate2D)point onPolyline:(IFPolyline *)polyline;
 @end

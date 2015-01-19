@@ -15,6 +15,9 @@
  */
 @class IFIndoorLocationManager;
 
+/**
+ *  Delegate for `IFIndoorLocationManager`
+ */
 @protocol IFIndoorLocationManagerDelegate <NSObject>
 @optional
 
@@ -41,6 +44,10 @@
 
 @end
 
+/**
+ *  The `IFIndoorLocationManager` class is central point for delivering information about indoor device position.
+ *
+ */
 @interface IFIndoorLocationManager : NSObject
 @property (nonatomic, weak) id<IFIndoorLocationManagerDelegate> delegate;
 
@@ -69,7 +76,7 @@
  *
  *  @param floorplan A floorplan we're interested in
  */
-- (void)startCheckingAreasForFloorplan:(IFMFloorplan *)floorplan;
+- (void)startCheckingAreas;
 
 /**
  *  When we don't need information about the areas any more

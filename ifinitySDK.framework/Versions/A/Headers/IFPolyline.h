@@ -7,14 +7,11 @@
 //
 
 #import <MapKit/MapKit.h>
-
+#import "IFRouteDetails.h"
 /**
  *  Extended Polyline view, used to get the information about each node description. Important for visually impaired.
  */
 @interface IFPolyline : MKPolyline
-
-- (void)setDescriptions:(NSArray *) descriptions;
-- (NSString *)getDescriptionForIndex:(NSUInteger)index;
-- (NSArray *)getDescriptions;
-
+@property (nonatomic, strong) NSArray *descriptions;
+- (NSString *)descriptionAtIndex:(NSUInteger)index;
 @end

@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
-#define IFINITY_SDK_VERSION_STRING @"0.1.0"
+#define IFINITY_SDK_VERSION_STRING @"0.1.1"
+#define IFINITY_SDK_VERSION 1001
 
 
 #import "IFDataManager.h"
@@ -14,7 +15,7 @@
 #import "IFLocationManager.h"
 #import "IFIndoorLocationManager.h"
 
-#import "IFTransmiter.h"
+#import "IFTransmitter.h"
 
 ///
 /// Components
@@ -36,3 +37,6 @@
 #import "IFMBeacon.h"
 #import "IFMContent.h"
 #import "IFMFloorplan.h"
+
+
+extern int if_ifinity_sdk_version();

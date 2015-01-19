@@ -12,5 +12,7 @@
  *  Renders tiles on the MKMapView
  */
 @interface IFTileOverlayRenderer : MKOverlayRenderer
-
++ (NSString *)tilesCacheDir;
++ (NSString *)tilesCacheDirMapId:(NSString *)mapID tileX:(NSUInteger)tilex tileY:(NSUInteger)tiley zoomLevel:(NSUInteger)zoomLevel;
++ (void)clearTilesCache;
 @end
