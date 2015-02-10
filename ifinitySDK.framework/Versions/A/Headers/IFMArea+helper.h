@@ -15,6 +15,7 @@
 
 + (IFMArea *)fetchAreaWithRemoteID:(NSNumber *)remoteID managedObjectContext:(NSManagedObjectContext *)context;
 + (NSArray *)fetchAreasWithFloorplanID:(NSNumber *)floorplanID managedObjectContext:(NSManagedObjectContext *)context;
++ (NSMutableDictionary *)fetchAreaPathsForFloorplan:(IFMFloorplan *)floorplan;
 
 + (IFMArea *)addAreaRemoteID:(NSNumber *)remoteID
               floorplanID:(NSNumber *)floorplanID

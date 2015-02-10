@@ -76,7 +76,7 @@
  *
  *  @param floorplan A floorplan we're interested in
  */
-- (void)startCheckingAreas;
+- (void)startCheckingAreasForFloorplan:(IFMFloorplan *)floorplan;
 
 /**
  *  When we don't need information about the areas any more

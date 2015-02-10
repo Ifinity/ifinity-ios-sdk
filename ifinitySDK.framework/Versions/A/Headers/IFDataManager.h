@@ -128,7 +128,7 @@ Most of data received from API is converted to coredata model object and stored 
 - (void)clearCaches;
 
 
-- (void)loadDataForLocation:(CLLocation *)location block:(void (^)(BOOL success))block;
+- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block;
 
 /**
  *  Query backend for route calculation between two points

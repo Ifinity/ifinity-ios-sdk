@@ -199,6 +199,11 @@
 @property (readonly, nonatomic) NSString *refreshToken;
 
 /**
+ The OAuth token scope - comma spearated strings. 
+ */
+@property (readonly, nonatomic) NSSet *scope;
+
+/**
  Whether the OAuth credentials are expired.
  */
 @property (readonly, nonatomic, assign, getter = isExpired) BOOL expired;
@@ -234,9 +239,11 @@
  
  @param refreshToken The OAuth refresh token.
  @param expiration The expiration of the access token.
+ @param scope String scopes in set.
  */
 - (void)setRefreshToken:(NSString *)refreshToken
-             expiration:(NSDate *)expiration;
+             expiration:(NSDate *)expiration
+                  scope:(NSSet *)scope;
 
 ///-----------------------------------------
 /// @name Storing and Retrieving Credentials
@@ -271,6 +278,13 @@
  @return Whether or not the credential was deleted from the keychain.
  */
 + (BOOL)deleteCredentialWithIdentifier:(NSString *)identifier;
+
+/**
+ *  Delete all OAuth credentials stored in Keychain
+ *
+ *  @return <#return value description#>
+ */
++ (BOOL)deleteAllCredential;
 #endif
 
 @end
