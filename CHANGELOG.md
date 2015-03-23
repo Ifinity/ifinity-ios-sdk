@@ -1,3 +1,13 @@
+## 0.1.3
+
+- New images sizes in venues and contents.
+- Calculate full route length from current point.
+- Get routes not only as polygon but also with nodes descriptions/types.
+- Get data from cache in async way
+- Render temporary map tiles if floorplan is not yet ready. IFTilesOverlay can pass information if map is ready or not.   
+- Methods to fetch venues and areas from cache.
+- Bugfixes
+  
 ## 0.1.2
 
 - Start/stop BLE scan on application enter background / become active only when scan is running.

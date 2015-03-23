@@ -13,7 +13,7 @@
  *  Holds the information about the route, from and to coordinates, distance and next node details. 
  */
 @interface IFRouteDetails : NSObject
-
+@property (nonatomic) NSUInteger indexInRoute;
 @property (nonatomic) CLLocationCoordinate2D currentLocation;
 @property (nonatomic) CLLocationCoordinate2D nextNodeLocation;
 @property (nonatomic) NSString *nextNodeDescription;

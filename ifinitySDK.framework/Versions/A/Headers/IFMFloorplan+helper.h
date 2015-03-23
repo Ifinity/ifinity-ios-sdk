@@ -12,10 +12,10 @@
 @interface IFMFloorplan (helper)
 
 + (IFMFloorplan *)fetchFloorplansWithRemoteID:(NSNumber *)remoteID managedObjectContext:(NSManagedObjectContext *)context;
-+ (NSArray *)fetchFloorplansWithPlaceID:(NSNumber *)placeID managedObjectContext:(NSManagedObjectContext *)context;
++ (NSArray *)fetchFloorplansWithVenueID:(NSNumber *)venueID managedObjectContext:(NSManagedObjectContext *)context;
 
 + (IFMFloorplan *)addFloorplanRemoteID:(NSNumber *)remoteID
-                            placeID:(NSNumber *)placeID
+                            venueID:(NSNumber *)venueID
                               mapID:(NSString *)mapID
                                name:(NSString *)name
                               label:(NSString *)label

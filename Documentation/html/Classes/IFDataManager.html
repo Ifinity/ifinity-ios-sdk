@@ -63,6 +63,8 @@
 	
 	<option value="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</option>
 	
+	<option value="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:</option>
+	
 	<option value="//api/name/setClientID:secret:">&nbsp;&nbsp;&nbsp;&nbsp;- setClientID:secret:</option>
 	
 	<option value="//api/name/unauthenticate">&nbsp;&nbsp;&nbsp;&nbsp;- unauthenticate</option>
@@ -116,6 +118,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearCaches">clearCaches</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:">routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setClientID:secret:">setClientID:secret:</a></span></li>
 	
@@ -248,6 +252,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:</a></code>
 	</span>
 	
 	
@@ -620,6 +630,87 @@ Use with blocks or delegates</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:" title="routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:"></a>
+	<h3 class="subsubtitle method-title">routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Query backend for route calculation between two points</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)routeFromFloorId:(NSNumber *)<em>fromFloorId</em> fromCoordinate:(CLLocationCoordinate2D)<em>fromCoordinate</em> toFloorId:(NSNumber *)<em>toFloorId</em> toCoordinate:(CLLocationCoordinate2D)<em>toCoordinate</em> transportType:(IFRouteType)<em>type</em> successBlock:(void ( ^ ) ( NSDictionary *routes , NSDictionary *floorNodes , CLLocationCoordinate2D endPoint ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromFloorId</em></dt>
+			<dd><p>start floor id</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromCoordinate</em></dt>
+			<dd><p>start coordinate</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toFloorId</em></dt>
+			<dd><p>destination floor id</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toCoordinate</em></dt>
+			<dd><p>destination coordinates</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>route type</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>failure block</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>successBlock</em></dt>
+			<dd><p>success block, array routes filled with IFPolygon objects</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Query backend for route calculation between two points</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IFDataManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setClientID:secret:" title="setClientID:secret:"></a>
 	<h3 class="subsubtitle method-title">setClientID:secret:</h3>
 	
@@ -734,7 +825,7 @@ Use with blocks or delegates</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Ifinity. All rights reserved. (Last updated: 2015-02-10)</span><br />
+						<p><span class="copyright">&copy; 2015 Ifinity. All rights reserved. (Last updated: 2015-03-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

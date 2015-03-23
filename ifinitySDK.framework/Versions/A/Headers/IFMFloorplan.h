@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class IFMArea, IFMBeacon, IFMPlace;
+@class IFMArea, IFMBeacon, IFMVenue;
 
 @interface IFMFloorplan : NSManagedObject
 
@@ -22,10 +22,11 @@
 @property (nonatomic, retain) NSNumber * rotation;
 @property (nonatomic, retain) NSNumber * swlat;
 @property (nonatomic, retain) NSNumber * swlng;
-@property (nonatomic, retain) NSNumber * place_id;
+@property (nonatomic, retain) NSNumber * venue_id;
 @property (nonatomic, retain) NSSet *areas;
 @property (nonatomic, retain) NSSet *beacons;
-@property (nonatomic, retain) IFMPlace *place;
+@property (nonatomic, retain) IFMVenue *venue;
+@property (nonatomic, retain) NSNumber *mapReady;
 @end
 
 @interface IFMFloorplan (CoreDataGeneratedAccessors)

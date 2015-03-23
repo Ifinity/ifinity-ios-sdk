@@ -14,4 +14,13 @@
 @interface IFPolyline : MKPolyline
 @property (nonatomic, strong) NSArray *descriptions;
 - (NSString *)descriptionAtIndex:(NSUInteger)index;
+/**
+ *  Calculate full path lenght from current position to end of the path.
+ *
+ *  @param coordinate real not translated coordinate
+ *  @param idx        index of next point in path
+ *
+ *  @return length in meters
+ */
+- (CLLocationDistance)pathLenghtFromCoordinate:(CLLocationCoordinate2D)coordinate andIndex:(NSUInteger)idx;
 @end

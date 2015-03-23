@@ -13,8 +13,13 @@
 /**
  *  Notification send when new data are inserted/updated in cache database.
  */
-extern NSString * const IFDataManagerNotificationPlacesUpdate;
+extern NSString * const IFDataManagerNotificationVenuesUpdate;
 extern NSString * const IFDataManagerNotificationCacheClear;
+
+/**
+ *  @deprecated
+ */
+extern NSString * const IFDataManagerNotificationPlacesUpdate __attribute__((deprecated));
 
 
 @class IFDataManager;
@@ -130,6 +135,12 @@ Most of data received from API is converted to coredata model object and stored 
 
 - (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block;
 
+
+- (void)fetchVenuesFromCacheWithBlock:(void(^)(NSArray *venues))block;
+- (void)fetchFloorsFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *floors))block;
+- (void)fetchAreasFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *areas))block;
+- (void)fetchAreasFromCacheForFloorId:(NSNumber *)floorId block:(void(^)(NSArray *areas))block;
+
 /**
  *  Query backend for route calculation between two points
  *
@@ -147,5 +158,24 @@ Most of data received from API is converted to coredata model object and stored 
             toCoordinate:(CLLocationCoordinate2D)toCoordinate
            transportType:(IFRouteType)type
                  success:(void (^)(NSDictionary *routes, CLLocationCoordinate2D endPoint))success
+                 failure:(void (^)(NSError *error))failure __attribute__((deprecated));
+/**
+ *  Query backend for route calculation between two points
+ *
+ *  @param fromFloorId    start floor id
+ *  @param fromCoordinate start coordinate
+ *  @param toFloorId      destination floor id
+ *  @param toCoordinate   destination coordinates
+ *  @param type           route type
+ *  @param successBlock        success block, array routes filled with IFPolygon objects
+ *  @param failure        failure block
+ */
+- (void)routeFromFloorId:(NSNumber *)fromFloorId
+          fromCoordinate:(CLLocationCoordinate2D)fromCoordinate
+               toFloorId:(NSNumber *)toFloorId
+            toCoordinate:(CLLocationCoordinate2D)toCoordinate
+           transportType:(IFRouteType)type
+                 successBlock:(void (^)(NSDictionary *routes, NSDictionary *floorNodes, CLLocationCoordinate2D endPoint))success
                  failure:(void (^)(NSError *error))failure;
+
 @end

@@ -14,12 +14,8 @@
  *  Holds and calculates details about current map object
  */
 @interface IFTileOverlay : NSObject <MKOverlay>
-{
-    CGFloat defaultAlpha;
-}
-
 @property (nonatomic, weak) NSString *mapURL;
-
+@property (nonatomic) BOOL mapNotReady;
 - (NSString *)urlForPointWithX:(NSUInteger)x andY:(NSUInteger)y andZoomLevel:(NSUInteger)zoomLevel;
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale;
 

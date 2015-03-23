@@ -17,8 +17,9 @@
                        areaID:(NSNumber *)areaID
                   floorplanID:(NSNumber *)floorplanID
                          name:(NSString *)name
-                    iBeaconID:(NSString *)iBeaconID
                          uuid:(NSString *)uuid
+                        major:(NSNumber *)major
+                        minor:(NSNumber *)minor
                           lat:(NSNumber *)lat
                           lng:(NSNumber *)lng
          managedObjectContext:(NSManagedObjectContext *)context;

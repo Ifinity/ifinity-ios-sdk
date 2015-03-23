@@ -42,6 +42,16 @@
  */
 - (void)manager:(IFIndoorLocationManager *)manager didExitArea:(IFMArea *)area;
 
+
+/**
+ *  Method to provide to IFIndoorLocationManager beacon coordinates. 
+ *  If this method is immplemented it overrides data from internal cache (data from geos).
+ *  In theory this delegate should allow to implement own beacons source for navigation logic.
+ *
+ *  @param area Area we've just left
+ */
+- (CLLocation *)manager:(IFIndoorLocationManager *)manager locationForTransmitter:(IFTransmitter *)transmitter;
+
 @end
 
 /**
@@ -72,15 +82,17 @@
 - (void)stopUpdatingIndoorLocation;
 
 /**
- *  Ask manager to search for the areas nearby, and get's notified about they presence
+ *  Start detecting current area base on calculated position. When area changed notify about it by calling methods in delegate (didEnterArea, didExitArea).
  *
  *  @param floorplan A floorplan we're interested in
  */
 - (void)startCheckingAreasForFloorplan:(IFMFloorplan *)floorplan;
 
 /**
- *  When we don't need information about the areas any more
+ *  Stop checking areas for current position.
  */
 - (void)stopCheckingAreas;
 
+
+- (IFMArea *)currentArea;
 @end
