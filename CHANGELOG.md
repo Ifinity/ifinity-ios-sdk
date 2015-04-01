@@ -1,3 +1,7 @@
+## 0.1.3.1
+
+- Critical bugfix
+
 ## 0.1.3
 
 - New images sizes in venues and contents.
