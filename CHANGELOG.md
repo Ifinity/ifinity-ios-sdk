@@ -1,3 +1,7 @@
+## 0.1.4.1
+
+- Critical bugfix, missing header files
+
 ## 0.1.4
 
 - IFIndoorMapController -  new & fresh utility class to easy implementing indoor navigation. 
