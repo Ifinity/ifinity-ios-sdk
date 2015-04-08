@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
-#define IFINITY_SDK_VERSION_STRING @"0.1.3"
-#define IFINITY_SDK_VERSION 1003
+#define IFINITY_SDK_VERSION_STRING @"0.1.4"
+#define IFINITY_SDK_VERSION 1004
 
 
 #import "IFDataManager.h"
