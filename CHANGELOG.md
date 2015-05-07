@@ -1,3 +1,7 @@
+## 0.1.5.1
+
+- IFIndoorMapController venue one beacon
+
 ## 0.1.5
 
 - IFIndoorMapController mapview public delegate

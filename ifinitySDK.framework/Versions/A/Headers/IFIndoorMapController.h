@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import "IFMFloorplan.h"
+#import "IFMVenue.h"
 
 @class IFIndoorMapController;
 
@@ -36,12 +37,21 @@
 - (void)indoorMapController:(IFIndoorMapController *)indoorMapController didExitArea:(IFMArea *)area;
 
 /**
+ *  Called when framework detects strongest beacon assigned for venue and floor.
+ *
+ *  @param indoorMapController map controller
+ *  @param floor               closest floor base on beacon signal
+ *  @param venue               closest venue base on beacon signal
+ */
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didEnterFloor:(IFMFloorplan *)floor venue:(IFMVenue *)venue;
+
+/**
  *  Called when framework detects strongest beacon assigned for floor.
  *
  *  @param indoorMapController map controller
  *  @param floor               closest floor base on beacon signal
  */
-- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didEnterFloor:(IFMFloorplan *)floor;
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didEnterFloor:(IFMFloorplan *)floor __attribute__((deprecated));
 
 /**
  *  Distance value change to closest node in path
