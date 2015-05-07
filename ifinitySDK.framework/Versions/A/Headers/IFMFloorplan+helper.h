@@ -2,8 +2,8 @@
 //  Floorplan+helper.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 06.01.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 06.01.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import "IFMFloorplan.h"

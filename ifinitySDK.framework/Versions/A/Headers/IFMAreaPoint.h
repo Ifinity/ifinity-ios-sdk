@@ -2,8 +2,8 @@
 //  AreaPoint.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 03.01.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 03.01.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

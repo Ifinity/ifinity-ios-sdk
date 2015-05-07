@@ -2,8 +2,8 @@
 //  IFLocation.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 25.03.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 25.03.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import <CoreLocation/CoreLocation.h>

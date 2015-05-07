@@ -95,18 +95,18 @@
  *  Helper method to extend current map with new annotations. 
  *  If annotation is not supported by IFINdoorMapController this method is called. This allows to provide own AnnotationView.
  *
- *  @param indoorMapController <#indoorMapController description#>
- *  @param mapView             <#mapView description#>
- *  @param annotation          <#annotation description#>
+ *  @param indoorMapController 
+ *  @param mapView
+ *  @param annotation
  *
- *  @return <#return value description#>
+ *  @return
  */
-- (MKAnnotationView *)indoorMapController:(IFIndoorMapController *)indoorMapController mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation> )annotation;
+- (MKAnnotationView *)indoorMapController:(IFIndoorMapController *)indoorMapController mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation> )annotation __attribute__((deprecated));
 
 @end
 
 
-@interface IFIndoorMapController : NSObject
+@interface IFIndoorMapController : NSObject <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic, weak) IBOutlet id<IFIndoorMapControllerDelegate> delegate;
 /**
@@ -143,13 +143,14 @@
 @property (nonatomic, assign, readonly) CLLocationCoordinate2D userCoordinate;
 
 /**
- *  Initialize map view
+ *  Initialize map view with location manager and set self as manager delegate.
  *
  *  @param mapView        map view
  *  @param viewController view controller with map
  *  @param floorplan      floorplan data model
+ *  @param manager location manager
  */
-- (void)setupWithMapView:(MKMapView *)mapView viewController:(UIViewController *)viewController floorplan:(IFMFloorplan *)floorplan;
+- (void)setupWithMapView:(MKMapView *)mapView viewController:(UIViewController *)viewController floorplan:(IFMFloorplan *)floorplan locationManager:(CLLocationManager *)manager;
 
 /**
  *  Start indoor navigation
@@ -188,4 +189,18 @@
  *  @param heading enable/disable heading
  */
 - (void)setFollowHeading:(BOOL)heading;
+
+#pragma mark - CLLocationManagerDelegate methods
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager;
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)heading;
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
+#pragma mark - MKMapViewDelegate methods
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay> )overlay;
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated;
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation> )annotation;
+
 @end

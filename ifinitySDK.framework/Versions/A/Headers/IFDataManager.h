@@ -2,13 +2,15 @@
 //  RingCentralSDK.h
 //  RingcentralAPI
 //
-//  Created by GetIfinity.com on 06.11.2013.
-//  Copyright (c) 2013 inventica.mobi. All rights reserved.
+//  Created by GetIfinity on 06.11.2013.
+//  Copyright (c) 2013 GetIfinity. All rights reserved.
 //
 
 #import "IFDataManagerTypes.h"
 #import "IFOAuth2Client.h"
 #import <CoreLocation/CoreLocation.h>
+@class IFMBeacon;
+@class IFMContent;
 
 /**
  *  Notification send when new data are inserted/updated in cache database.
@@ -135,11 +137,27 @@ Most of data received from API is converted to coredata model object and stored 
 
 - (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block;
 
+- (void)loadDataForSearchQuery:(NSString *)query
+                      location:(CLLocation *)location
+                          page:(NSNumber *)page
+                         limit:(NSNumber *)limit
+              withPublicVenues:(BOOL)publicVenues
+                  successBlock:(void (^)(NSArray* venues))successBlock
+                       failure:(void (^)(NSError *error))failure;
+
+- (void)loadVenueForVenueID:(NSNumber *)venueId successBlock:(void (^)(NSArray* venues))successBlock failure:(void (^)(NSError *error))failure;
 
 - (void)fetchVenuesFromCacheWithBlock:(void(^)(NSArray *venues))block;
 - (void)fetchFloorsFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *floors))block;
 - (void)fetchAreasFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *areas))block;
 - (void)fetchAreasFromCacheForFloorId:(NSNumber *)floorId block:(void(^)(NSArray *areas))block;
+- (void)fetchBeaconByUUID:(NSUUID *)uuid major:(NSInteger)major minor:(NSInteger)minor block:(void(^)(IFMBeacon *beacon))block;
+- (void)fetchNotifcationContentForAreaId:(NSNumber *)areaId block:(void(^)(IFMContent *content))block;
+- (void)fetchVenuesFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *venues))block;
+- (void)fetchAreasFromCacheForVenueId:(NSNumber *)venueId searchText:(NSString *)searchText block:(void(^)(NSArray *floors))block;
+- (void)fetchContentFromCacheForContentId:(NSNumber *)contentId block:(void(^)(NSArray *contents))block;
+- (void)fetchNotifcationContentForVenueId:(NSNumber *)venueId block:(void(^)(IFMContent *content))block;
+- (void)fetchAreasFromCacheForAreaId:(NSNumber *)areaId block:(void(^)(NSArray *areas))block;
 
 /**
  *  Query backend for route calculation between two points

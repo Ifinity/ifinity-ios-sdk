@@ -1,3 +1,11 @@
+## 0.1.5
+
+- IFIndoorMapController mapview public delegate
+- IFIndoorMapController location manager public manager
+- public fill from json model api
+- background push venue
+- create venue one beacon
+
 ## 0.1.4.1
 
 - Critical bugfix, missing header files

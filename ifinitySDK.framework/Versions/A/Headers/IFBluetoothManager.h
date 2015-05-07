@@ -2,8 +2,8 @@
 //  IFBluetoothManager.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 04.01.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 04.01.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -34,7 +34,16 @@
  *  @param manager    IFBluetoothManager manager
  *  @param floorplan Floorplan with available beacons
  */
-- (void)manager:(IFBluetoothManager *)manager didDiscoverActiveBeaconsForFloorplan:(IFMFloorplan *)floorplan;
+- (void)manager:(IFBluetoothManager *)manager didDiscoverActiveBeaconsForFloorplan:(IFMFloorplan *)floorplan __attribute__((deprecated));
+
+/**
+ *  We found some active beacons for the venue and floor
+ *
+ *  @param manager    IFBluetoothManager manager
+ *  @param venue IFMVenue with available beacons
+ *  @param floorplan Floorplan with available beacons
+ */
+- (void)manager:(IFBluetoothManager *)manager didDiscoverActiveBeaconsForVenue:(IFMVenue *)venue floorplan:(IFMFloorplan *)floorplan;
 
 /**
  *  We lost the connection with all of the beacons inside the floor
@@ -43,6 +52,14 @@
  *  @param floorplan Floorplan with no active beacons
  */
 - (void)manager:(IFBluetoothManager *)manager didLostAllBeaconsForFloorplan:(IFMFloorplan *)floorplan;
+
+/**
+ *  We lost the connection with all of the beacons inside the venue
+ *
+ *  @param manager    IFBluetoothManager manager
+ *  @param venue IFMVenue with no active beacons
+ */
+- (void)manager:(IFBluetoothManager *)manager didLostAllBeaconsForVenue:(IFMVenue *)venue;
 
 /**
  *  There are some new beacons nearby
@@ -110,6 +127,11 @@
  *  IFBluetoothManagerDelegate responsible for passing all the events from the manager
  */
 @property (nonatomic, weak) id <IFBluetoothManagerDelegate> delegate;
+
+/**
+ *  Parameter describing transmitter as near (is in near proximity), default is -30
+ */
+@property (nonatomic) NSInteger nearRSSI;
 
 /**
  *  When useOnlyNearbyBeacons is equal YES, we're adding only beacons within the range of aprox. 1m - it's good for proximity mode, for the navigation it should be disabled!

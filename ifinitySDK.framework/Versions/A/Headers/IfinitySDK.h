@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
-#define IFINITY_SDK_VERSION_STRING @"0.1.4"
-#define IFINITY_SDK_VERSION 1004
+#define IFINITY_SDK_VERSION_STRING @"0.1.5"
+#define IFINITY_SDK_VERSION 1005
 
 
 #import "IFDataManager.h"
@@ -41,3 +41,9 @@
 
 
 extern int if_ifinity_sdk_version();
+
+typedef NS_ENUM(NSUInteger, IFApiIfinityStatus) {
+    IFApiIfinityStatusProduction = 0,
+    IFApiIfinityStatusTest = 1 ,
+    IFApiIfinityStatusStage = 2
+};

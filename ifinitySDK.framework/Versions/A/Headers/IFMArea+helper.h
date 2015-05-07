@@ -2,8 +2,8 @@
 //  Area+helper.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 04.01.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 04.01.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import "IFMArea.h"

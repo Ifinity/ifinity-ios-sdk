@@ -2,8 +2,8 @@
 //  RouteDetails.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 07.03.2014.
-//  Copyright (c) 2014 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 07.03.2014.
+//  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

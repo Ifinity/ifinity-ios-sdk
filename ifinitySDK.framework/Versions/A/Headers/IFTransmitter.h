@@ -2,8 +2,8 @@
 //  IFTransmiter.h
 //  IfinitySDK
 //
-//  Created by GetIfinity.com on 24.07.2013.
-//  Copyright (c) 2013 GetIfinity.com. All rights reserved.
+//  Created by GetIfinity on 24.07.2013.
+//  Copyright (c) 2013 GetIfinity. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -27,6 +27,10 @@
  */
 @property (nonatomic, readonly) NSNumber *filteredRSSI;
 
+/**
+ *  Parameter describing transmitter as near (is in near proximity), default is -30
+ */
+@property (nonatomic) NSInteger nearRSSI;
 
 /**
  *  Transmitter (beacon) name
