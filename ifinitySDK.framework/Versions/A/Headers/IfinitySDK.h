@@ -42,8 +42,5 @@
 
 extern int if_ifinity_sdk_version();
 
-typedef NS_ENUM(NSUInteger, IFApiIfinityStatus) {
-    IFApiIfinityStatusProduction = 0,
-    IFApiIfinityStatusTest = 1 ,
-    IFApiIfinityStatusStage = 2
-};
+extern void custom_api_ifinity_url(NSString *url);
+extern NSString* custom_api_ifinity_is_url();

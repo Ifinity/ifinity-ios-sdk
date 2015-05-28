@@ -102,6 +102,13 @@
 - (void)indoorMapController:(IFIndoorMapController *)indoorMapController didDragMap:(UIGestureRecognizer*)gestureRecognizer;
 
 /**
+ *  User is probably outside the building right now - we're not getting any informations from the beacons nearby.
+ *
+ *  @param indoorMapController map controller
+ */
+- (void)didLeaveTheBuilding:(IFIndoorMapController *)indoorMapController;
+
+/**
  *  Helper method to extend current map with new annotations. 
  *  If annotation is not supported by IFINdoorMapController this method is called. This allows to provide own AnnotationView.
  *

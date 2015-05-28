@@ -31,7 +31,7 @@
  *  The `IFLocationManager` recives current user position and fetch nearby data (beacons, buildings). 
  *  This class helped also in presenting data on the map.
  */
-@interface IFLocationManager : NSObject <CLLocationManagerDelegate>
+@interface IFLocationManager : NSObject
 
 /**
  *  Delegate responsible for passing all the events from the manager
@@ -76,6 +76,13 @@
  *  @return zoom factor
  */
 - (int) zoomFactor;
+
+/**
+ *  Current zoom factor
+ *
+ *  @param zoom zoom factor
+ */
+- (void) setZoomFactor:(int)zoom;
 
 /**
  *  If we're good with 21 zoom level, we don't need to enable translation methods. You should enable this only when you want to launch zoom level more than 22

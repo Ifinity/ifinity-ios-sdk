@@ -135,7 +135,8 @@ Most of data received from API is converted to coredata model object and stored 
 - (void)clearCaches;
 
 
-- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block;
+- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block __attribute__((deprecated));
+- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues successBlock:(void (^)(NSArray* venues))successBlock failure:(void (^)(NSError *error))failure;
 
 - (void)loadDataForSearchQuery:(NSString *)query
                       location:(CLLocation *)location
@@ -158,6 +159,8 @@ Most of data received from API is converted to coredata model object and stored 
 - (void)fetchContentFromCacheForContentId:(NSNumber *)contentId block:(void(^)(NSArray *contents))block;
 - (void)fetchNotifcationContentForVenueId:(NSNumber *)venueId block:(void(^)(IFMContent *content))block;
 - (void)fetchAreasFromCacheForAreaId:(NSNumber *)areaId block:(void(^)(NSArray *areas))block;
+- (void)fetchContentForAreaId:(NSNumber *)areaId block:(void(^)(IFMContent *content))block;
+- (void)fetchContentForVenueId:(NSNumber *)venueId block:(void(^)(IFMContent *content))block;
 
 /**
  *  Query backend for route calculation between two points

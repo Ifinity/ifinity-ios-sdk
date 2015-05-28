@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 GetIfinity. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 /**
  *  A shortcode for all the methods we're getting from the server with success
  *

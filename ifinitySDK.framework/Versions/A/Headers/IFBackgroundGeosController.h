@@ -38,6 +38,7 @@
  */
 - (instancetype)initWithLocationManager:(CLLocationManager *)manager;
 - (void)updateLocation:(CLLocation *)location;
+- (void)restartLocation:(CLLocation *)location;
 
 #pragma mark - CLLocationManagerDelegate methods
 

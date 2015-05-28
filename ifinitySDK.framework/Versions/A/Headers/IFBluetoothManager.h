@@ -108,6 +108,15 @@
  *  @see centralManagerState
  */
 - (void)manager:(IFBluetoothManager *)manager didUpdateCentralManagerState:(CBCentralManagerState)centralManagerState;
+
+
+/**
+ *  User is probably outside the building right now - we're not getting any informations from the beacons nearby.
+ *
+ *  @param manager bluetooth manager
+ */
+- (void)didLeaveTheBuilding:(IFBluetoothManager *)manager;
+
 @end
 
 
@@ -142,6 +151,7 @@
  *  The current state of the CBCentralManager
  */
 @property (nonatomic, readonly) CBCentralManagerState centralManagerState;
+
 /**
  *  Each manager is a singleton, they are accessible by the sharedManager method
  *
@@ -181,4 +191,5 @@
  */
 - (void)stopVirtualBeacon;
 
+- (void)setOutsideBeaconName:(NSString *)name;
 @end

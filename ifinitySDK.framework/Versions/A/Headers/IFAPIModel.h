@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "IFLocation.h"
+#import "IFMPush.h"
 
 @class IFContentModel;
 @class IFImageModel;
@@ -66,6 +67,7 @@ typedef NS_ENUM(NSUInteger, IFFloorplanTileStatus) {
 @property (nonatomic, retain) NSString *content;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSNumber *notification;
+@property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) IFImageModel *icon;
 
 @end
@@ -127,5 +129,36 @@ typedef NS_ENUM(NSUInteger, IFFloorplanTileStatus) {
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) IFRouteNodeType type;
+
+@end
+
+@class IFPushLocalModel, IFPushRemoteModel;
+@interface IFPushModel : NSObject
+
+@property (nonatomic, retain) NSNumber * remote_id;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * info;
+@property (nonatomic, assign) IFMPushType type;
+@property (nonatomic, retain) NSString * content;
+@property (nonatomic, retain) NSString * url;
+@property (nonatomic, retain) NSString * icon;
+@property (nonatomic, retain) IFPushLocalModel *pushLocal;
+@property (nonatomic, retain) IFPushRemoteModel *pushRemote;
+
+@end
+
+@interface IFPushLocalModel : NSObject
+
+@property (nonatomic, retain) NSNumber * area_id;
+@property (nonatomic, retain) NSNumber * venue_id;
+@property (nonatomic, retain) NSNumber * content_id;
+
+@end
+
+@interface IFPushRemoteModel : NSObject
+
+@property (nonatomic, retain) NSNumber * update_time;
+@property (nonatomic, retain) NSNumber * background_mode;
+@property (nonatomic, retain) NSString * background_url;
 
 @end

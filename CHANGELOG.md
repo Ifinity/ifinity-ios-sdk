@@ -1,6 +1,12 @@
-## 0.1.5.1
+## 0.1.6
 
-- IFIndoorMapController venue one beacon
+- push background update only inactive
+- custom api url
+- coredata push structure
+- push manager class
+- background push - add push manager
+- local push notification open
+- background push add authenticate
 
 ## 0.1.5
 
