@@ -1,3 +1,7 @@
+## 0.1.6.1
+
+- Critical bugfix bundle image
+
 ## 0.1.6
 
 - push background update only inactive
