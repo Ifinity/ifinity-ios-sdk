@@ -78,6 +78,14 @@
 - (void)indoorMapController:(IFIndoorMapController *)indoorMapController didChangeTargetHeading:(double)heading;
 
 /**
+ *  Change of heading 
+ *
+ *  @param indoorMapController map controller
+ *  @param heading             new heading value
+ */
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didChangeHeading:(double)heading;
+
+/**
  *  Called when floor plan was successful added to map
  *
  *  @param indoorMapController map controller

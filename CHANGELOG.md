@@ -1,3 +1,8 @@
+## 0.1.6.2
+
+- Stats system
+- Add push to manager list only when it is content
+
 ## 0.1.6.1
 
 - Critical bugfix bundle image
