@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 @class IFMBeacon;
 @class IFMContent;
+@class IFMPush;
 
 /**
  *  Notification send when new data are inserted/updated in cache database.
@@ -136,7 +137,8 @@ Most of data received from API is converted to coredata model object and stored 
 
 
 - (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues block:(void (^)(BOOL success))block __attribute__((deprecated));
-- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues successBlock:(void (^)(NSArray* venues))successBlock failure:(void (^)(NSError *error))failure;
+- (void)loadDataForLocation:(CLLocation *)location withPublicVenues:(BOOL)publicVenues successBlock:(void (^)(NSArray* venues))successBlock failure:(void (^)(NSError *error))failure __attribute__((deprecated));
+- (void)loadDataForLocation:(CLLocation *)location distance:(NSNumber *)distance withPublicVenues:(BOOL)publicVenues successBlock:(void (^)(NSArray* venues))successBlock failure:(void (^)(NSError *error))failure;
 
 - (void)loadDataForSearchQuery:(NSString *)query
                       location:(CLLocation *)location
@@ -153,7 +155,7 @@ Most of data received from API is converted to coredata model object and stored 
 - (void)fetchAreasFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *areas))block;
 - (void)fetchAreasFromCacheForFloorId:(NSNumber *)floorId block:(void(^)(NSArray *areas))block;
 - (void)fetchBeaconByUUID:(NSUUID *)uuid major:(NSInteger)major minor:(NSInteger)minor block:(void(^)(IFMBeacon *beacon))block;
-- (void)fetchNotifcationContentForAreaId:(NSNumber *)areaId block:(void(^)(IFMContent *content))block;
+- (void)fetchNotifcationContentForAreaId:(NSNumber *)areaId backgroundNotification:(BOOL)notification block:(void(^)(IFMContent *content))block;
 - (void)fetchVenuesFromCacheForVenueId:(NSNumber *)venueId block:(void(^)(NSArray *venues))block;
 - (void)fetchAreasFromCacheForVenueId:(NSNumber *)venueId searchText:(NSString *)searchText block:(void(^)(NSArray *floors))block;
 - (void)fetchContentFromCacheForContentId:(NSNumber *)contentId block:(void(^)(NSArray *contents))block;
@@ -161,7 +163,9 @@ Most of data received from API is converted to coredata model object and stored 
 - (void)fetchAreasFromCacheForAreaId:(NSNumber *)areaId block:(void(^)(NSArray *areas))block;
 - (void)fetchContentForAreaId:(NSNumber *)areaId block:(void(^)(IFMContent *content))block;
 - (void)fetchContentForVenueId:(NSNumber *)venueId block:(void(^)(IFMContent *content))block;
-
+- (void)fetchPushWithRemoteID:(NSNumber *)remoteID block:(void(^)(IFMPush *content))block;
+- (void)fetchVenuesFromCacheForFloorId:(NSNumber *)floorId block:(void(^)(NSArray *venues))block;
+- (void)fetchFloorsFromCacheForFloorId:(NSNumber *)floorId block:(void(^)(NSArray *floors))block;
 /**
  *  Query backend for route calculation between two points
  *

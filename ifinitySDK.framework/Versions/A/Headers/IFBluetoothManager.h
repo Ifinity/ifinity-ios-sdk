@@ -109,14 +109,6 @@
  */
 - (void)manager:(IFBluetoothManager *)manager didUpdateCentralManagerState:(CBCentralManagerState)centralManagerState;
 
-
-/**
- *  User is probably outside the building right now - we're not getting any informations from the beacons nearby.
- *
- *  @param manager bluetooth manager
- */
-- (void)didLeaveTheBuilding:(IFBluetoothManager *)manager;
-
 @end
 
 
@@ -167,9 +159,16 @@
 - (NSDictionary *)transmitters;
 
 /**
- *  The only way to start looking for beacons and instatiate the bluetooth manager
+ *  Start looking for beacons and instatiate the bluetooth manager
  */
 - (void)startManager;
+
+/**
+ *  Start looking for beacons, instatiate the bluetooth manager and set object manager
+ *
+ *  @param manager location manager
+ */
+- (void)startManagerWithLocationManager:(CLLocationManager *)manager;
 
 /**
  *  When we don't need the manager any more

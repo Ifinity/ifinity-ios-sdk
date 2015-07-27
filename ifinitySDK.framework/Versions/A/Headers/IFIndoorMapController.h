@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "IFMFloorplan.h"
 #import "IFMVenue.h"
+#import "IFDataManager.h"
 
 @class IFIndoorMapController;
 
@@ -110,11 +111,20 @@
 - (void)indoorMapController:(IFIndoorMapController *)indoorMapController didDragMap:(UIGestureRecognizer*)gestureRecognizer;
 
 /**
- *  User is probably outside the building right now - we're not getting any informations from the beacons nearby.
+ *  We lost the connection with all of the beacons inside the floor
  *
- *  @param indoorMapController map controller
+ *  @param indoorMapController    map controller
+ *  @param floorplan Floorplan with no active beacons
  */
-- (void)didLeaveTheBuilding:(IFIndoorMapController *)indoorMapController;
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didLostAllBeaconsForFloorplan:(IFMFloorplan *)floorplan;
+
+/**
+ *  We lost the connection with all of the beacons inside the venue
+ *
+ *  @param indoorMapController    map controller
+ *  @param venue IFMVenue with no active beacons
+ */
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didLostAllBeaconsForVenue:(IFMVenue *)venue;
 
 /**
  *  Helper method to extend current map with new annotations. 
@@ -155,9 +165,17 @@
  */
 @property (nonatomic, assign) BOOL shouldAddBeaconsToMap;
 /**
+ *  Display areas on the map
+ */
+@property (nonatomic, assign) BOOL shouldAddAreasToMap;
+/**
  *  Is target navigation in progress
  */
 @property (nonatomic, assign, getter=isTargetNavigationEnabled) BOOL targetNavigationEnabled;
+/**
+ *  Is warrning next node
+ */
+@property (nonatomic, strong) NSString *nextNodeWarrning;
 /**
  *  Is heading enabled
  */
@@ -191,7 +209,14 @@
  *
  *  @param targetArea target area
  */
-- (void)startNavigationToArea:(IFMArea *)targetArea;
+- (void)startNavigationToArea:(IFMArea *)targetArea __attribute__((deprecated));
+/**
+ *  Calculate and start navigation to area
+ *
+ *  @param targetArea target area
+ *  @param type target of routes
+ */
+- (void)startNavigationToArea:(IFMArea *)targetArea withType:(IFRouteType)type;
 /**
  *  End navigation to area
  */

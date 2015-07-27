@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) NSNumber *venueId;
 @property (nonatomic, strong) NSNumber *publicVenue;
+@property (nonatomic, strong) NSNumber *outdoor;
 @property (nonatomic, strong) NSNumber *updateTime;
 @property (nonatomic, strong) CLLocation *centerLocation;
 @property (nonatomic, strong) NSString *name;
@@ -29,11 +30,15 @@
 
 @end
 
-typedef NS_ENUM(NSUInteger, IFFloorplanTileStatus) {
+typedef NS_ENUM (NSInteger, IFFloorplanTileStatus) {
     IFFloorplanTileStatusUnknown = 0,
-    IFFloorplanTileStatusReady = 1
+    IFFloorplanTileStatusReady = 1,
+    IFFloorplanTileStatusWaiting = 2,
+    IFFloorplanTileStatusGenerates = 3,
+    IFFloorplanTileStatusError = 4
 };
 
+@class IFFloorplanPointModel;
 
 @interface IFFloorplanModel : NSObject
 
@@ -47,6 +52,16 @@ typedef NS_ENUM(NSUInteger, IFFloorplanTileStatus) {
 @property (nonatomic, strong) NSArray *areas;
 @property (nonatomic, strong) NSArray *beacons;
 @property (nonatomic) IFFloorplanTileStatus tileStatus;
+@property (nonatomic, retain) IFFloorplanPointModel *point;
+
+@end
+
+@interface IFFloorplanPointModel : NSObject
+
+@property (nonatomic, retain) CLLocation *ne;
+@property (nonatomic, retain) CLLocation *nw;
+@property (nonatomic, retain) CLLocation *se;
+@property (nonatomic, retain) CLLocation *sw;
 
 @end
 

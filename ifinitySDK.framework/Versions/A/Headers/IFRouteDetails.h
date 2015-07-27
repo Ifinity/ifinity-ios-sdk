@@ -24,5 +24,4 @@
 @property (nonatomic) double headingToNext;
 @property (nonatomic) BOOL   reachedEndOfTheRoad;
 
-
 @end

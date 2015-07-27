@@ -13,10 +13,11 @@
 /**
  *  Notification send when new data are inserted/updated in cache database.
  */
-extern NSString * const IFPushManagerNotificationPushAdd;
-extern NSString * const IFPushManagerNotificationPushDelete;
+extern NSString * const IFPushManagerNotificationPushAdd;//when add database
+extern NSString * const IFPushManagerNotificationPushDelete;//when delete database
 extern NSString * const IFPushManagerNotificationPushAreaBackgroundAdd;
 extern NSString * const IFPushManagerNotificationPushVenueBackgroundAdd;
+extern NSString * const IFPushManagerNotificationPushRemoteBackgroundAdd;
 
 @interface IFPushManager : NSObject
 

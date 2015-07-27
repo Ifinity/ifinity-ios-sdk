@@ -64,6 +64,10 @@
 		
 		<option value="//api/name/heading">heading</option>
 		
+		<option value="//api/name/nextNodeWarrning">nextNodeWarrning</option>
+		
+		<option value="//api/name/shouldAddAreasToMap">shouldAddAreasToMap</option>
+		
 		<option value="//api/name/shouldAddBeaconsToMap">shouldAddBeaconsToMap</option>
 		
 		<option value="//api/name/targetNavigationEnabled">targetNavigationEnabled</option>
@@ -89,6 +93,8 @@
 		<option value="//api/name/start">- start</option>
 		
 		<option value="//api/name/startNavigationToArea:">- startNavigationToArea:</option>
+		
+		<option value="//api/name/startNavigationToArea:withType:">- startNavigationToArea:withType:</option>
 		
 		<option value="//api/name/stop">- stop</option>
 		
@@ -369,6 +375,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/shouldAddAreasToMap" title="shouldAddAreasToMap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldAddAreasToMap">&nbsp;&nbsp;shouldAddAreasToMap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Display areas on the map</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shouldAddAreasToMap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Display areas on the map</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/targetNavigationEnabled" title="targetNavigationEnabled"></a>
 	<h3 class="method-title"><code><a href="#//api/name/targetNavigationEnabled">&nbsp;&nbsp;targetNavigationEnabled</a></code>
 </h3>
@@ -398,6 +450,52 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Is target navigation in progress</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nextNodeWarrning" title="nextNodeWarrning"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nextNodeWarrning">&nbsp;&nbsp;nextNodeWarrning</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Is warrning next node</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *nextNodeWarrning</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Is warrning next node</p>
 			</div>
 			
 
@@ -730,6 +828,69 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/startNavigationToArea:withType:" title="startNavigationToArea:withType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startNavigationToArea:withType:">&ndash;&nbsp;startNavigationToArea:withType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Calculate and <a href="#//api/name/start">start</a> navigation to area</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startNavigationToArea:(IFMArea *)<em>targetArea</em> withType:(IFRouteType)<em>type</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>targetArea</code></th>
+						<td><p>target area</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>target of routes</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Calculate and <a href="#//api/name/start">start</a> navigation to area</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/stopNavigationToArea" title="stopNavigationToArea"></a>
 	<h3 class="method-title"><code><a href="#//api/name/stopNavigationToArea">&ndash;&nbsp;stopNavigationToArea</a></code>
 </h3>
@@ -943,12 +1104,14 @@
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-06-02</p>
+						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-07-27</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

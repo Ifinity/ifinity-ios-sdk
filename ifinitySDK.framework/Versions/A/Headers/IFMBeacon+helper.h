@@ -13,6 +13,7 @@
 + (IFMBeacon *)fetchBeaconWithRemoteID:(NSNumber *)remoteID managedObjectContext:(NSManagedObjectContext *)context;
 + (NSArray *)fetchBeaconsWithFloorplanID:(NSNumber *)floorplanID managedObjectContext:(NSManagedObjectContext *)context;
 + (NSArray *)fetchBeaconsWithVenueId:(NSNumber *)venueId;
++ (NSArray *)fetchBeaconsWithFloorId:(NSNumber *)floorId;
 + (IFMBeacon *)addBeaconRemoteID:(NSNumber *)remoteID
                        areaID:(NSNumber *)areaID
                   floorplanID:(NSNumber *)floorplanID

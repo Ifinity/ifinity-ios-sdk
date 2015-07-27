@@ -1,15 +1,15 @@
 //
-//  Floorplan.h
-//  IfinitySDK
+//  IFMFloorplan.h
+//  Pods
 //
-//  Created by GetIfinity on 16.03.2014.
-//  Copyright (c) 2014 GetIfinity. All rights reserved.
+//  Created by Mario on 01/07/15.
+//
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class IFMArea, IFMBeacon, IFMVenue;
+@class IFMArea, IFMBeacon, IFMFloorplanPoint, IFMVenue;
 
 @interface IFMFloorplan : NSManagedObject
 
@@ -22,11 +22,12 @@
 @property (nonatomic, retain) NSNumber * rotation;
 @property (nonatomic, retain) NSNumber * swlat;
 @property (nonatomic, retain) NSNumber * swlng;
+@property (nonatomic, retain) NSNumber * tileStatus;
 @property (nonatomic, retain) NSNumber * venue_id;
 @property (nonatomic, retain) NSSet *areas;
 @property (nonatomic, retain) NSSet *beacons;
 @property (nonatomic, retain) IFMVenue *venue;
-@property (nonatomic, retain) NSNumber *mapReady;
+@property (nonatomic, retain) IFMFloorplanPoint *point;
 @end
 
 @interface IFMFloorplan (CoreDataGeneratedAccessors)

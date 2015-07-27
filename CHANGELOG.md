@@ -1,3 +1,22 @@
+## 0.1.6.4
+
+- update compas
+- TranslationCoordinate change from center floor to center venue
+- bluetooth add function venueAndFloorDetected when is not lost strong transmitter
+- update camera distance
+- Bugfixs
+
+## 0.1.6.3
+
+- Update structur stats
+- New method in `IFBluetoothManagerDelegate` for detecting change of state in `didLostAllBeaconsForFloorplan` and ` didLostAllBeaconsForVenue`
+- Push manager remote push
+- Bugfixs
+- Update methods indoor navigation type transport
+- Change distance load data venues
+- New property in `IFIndoorMapController` to `shouldAddAreasToMap`.
+- New property in `IFIndoorMapController` to `nextNodeWarrning`.
+
 ## 0.1.6.2
 
 - Stats system

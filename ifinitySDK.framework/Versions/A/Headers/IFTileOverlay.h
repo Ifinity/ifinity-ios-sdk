@@ -9,13 +9,16 @@
 
 #import <MapKit/MapKit.h>
 #import <Foundation/Foundation.h>
+#import "IFAPIModel.h"
 
 /**
  *  Holds and calculates details about current map object
  */
 @interface IFTileOverlay : NSObject <MKOverlay>
 @property (nonatomic, weak) NSString *mapURL;
-@property (nonatomic) BOOL mapNotReady;
+@property (nonatomic) int index;
+@property (nonatomic) IFFloorplanTileStatus status;
+
 - (NSString *)urlForPointWithX:(NSUInteger)x andY:(NSUInteger)y andZoomLevel:(NSUInteger)zoomLevel;
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale;
 
