@@ -1,3 +1,9 @@
+## 0.1.6.5
+
+- Update methods add beacon or update beacon (floorId is opcional)
+- floor label change typ from NSString to NSNumber
+- Bugfixs
+
 ## 0.1.6.4
 
 - update compas

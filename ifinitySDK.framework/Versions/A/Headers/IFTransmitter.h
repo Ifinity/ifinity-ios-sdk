@@ -15,7 +15,7 @@
  *  Every beacon object it's a type of IFTransmitter, we can get it's identifier, RSSI, distance, radius, coordinate, etc.
  */
 @interface IFTransmitter : NSObject
-@property (nonatomic, readonly) CBPeripheral *peripheral;
+@property (nonatomic, strong, readonly) CBPeripheral *peripheral;
 @property (nonatomic) BOOL active;
 
 /**

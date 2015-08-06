@@ -18,7 +18,7 @@
                             venueID:(NSNumber *)venueID
                               mapID:(NSString *)mapID
                                name:(NSString *)name
-                              label:(NSString *)label
+                              label:(NSNumber *)label
                                file:(NSString *)file
                                data:(id)data
                             details:(id)details

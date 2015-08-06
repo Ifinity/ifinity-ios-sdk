@@ -43,7 +43,7 @@ typedef NS_ENUM (NSInteger, IFFloorplanTileStatus) {
 @interface IFFloorplanModel : NSObject
 
 @property (nonatomic, retain) NSNumber *floorplanId;
-@property (nonatomic, retain) NSString *label;
+@property (nonatomic, retain) NSNumber *label;
 @property (nonatomic, retain) NSString *mapId;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) CLLocation *ne;
