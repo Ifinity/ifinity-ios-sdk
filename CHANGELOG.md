@@ -1,10 +1,20 @@
-## 0.1.6.9
+## 0.1.6.7
 
+- update changelog
+
+## 0.1.6.6
+
+- Remove property in `IFMContent` to `Content`.
+- Change type property in `IFMVenue` to `IFMVenueTypeMap` or `IFMVenueTypeBeacon`.
+- New property in `IFMVenue` to `outdoor` or `compassCalibration`.
+- calibration compass in indoorMapcontroller
+- Bugfixs
+- new model push content to venue
+- New property in `IFMVenue` to `pushContents`.
+- coredate min max beacon change unit
+- Methods to fetch coredata models from cache.
 - Refactoring class
 - Update documentation
-
-## 0.1.6.8
-
 - background push content venue
 - New propertys `outdoor` or `hideTruePositionWhenNavigating` in `IFIndoorMapController`.
 - group node with function route coordinate
@@ -15,21 +25,6 @@
 - New methods in 'IFDataManager' to parser route model - 'parserRouteModel'
 - Refactoring class IFPushManager.
 - Bugfixes
-
-## 0.1.6.7
-
-- new model push content to venue
-- New property in `IFMVenue` to `pushContents`.
-- coredate min max beacon change unit
-- Methods to fetch coredata models from cache.
-
-## 0.1.6.6
-
-- Remove property in `IFMContent` to `Content`.
-- Change type property in `IFMVenue` to `IFMVenueTypeMap` or `IFMVenueTypeBeacon`.
-- New property in `IFMVenue` to `outdoor` or `compassCalibration`.
-- calibration compass in indoorMapcontroller
-- Bugfixs
 
 ## 0.1.6.5
 
