@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, IFRouteNodeType) {
 @interface IFLocation : CLLocation
 @property (nonatomic, copy) NSString *locationDescription;
 @property (nonatomic) IFRouteNodeType type;
+@property (nonatomic, strong) NSNumber *nodeId;
+@property (nonatomic) NSUInteger index;
 - (float)angleToLocation:(IFLocation *)second;
 
 + (float)angleFromCoordinate:(CLLocationCoordinate2D)first

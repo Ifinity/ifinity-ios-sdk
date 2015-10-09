@@ -1,3 +1,36 @@
+## 0.1.6.9
+
+- Refactoring class
+- Update documentation
+
+## 0.1.6.8
+
+- background push content venue
+- New propertys `outdoor` or `hideTruePositionWhenNavigating` in `IFIndoorMapController`.
+- group node with function route coordinate
+- new algorithm user position
+- New class `IFRoutesNavigationController` to route navigate
+- New class `IFTargetNavigationContext` is parsed `IFRouteModel` object. 
+- New methods in `IFDataManager` generate destination routes to places
+- New methods in 'IFDataManager' to parser route model - 'parserRouteModel'
+- Refactoring class IFPushManager.
+- Bugfixes
+
+## 0.1.6.7
+
+- new model push content to venue
+- New property in `IFMVenue` to `pushContents`.
+- coredate min max beacon change unit
+- Methods to fetch coredata models from cache.
+
+## 0.1.6.6
+
+- Remove property in `IFMContent` to `Content`.
+- Change type property in `IFMVenue` to `IFMVenueTypeMap` or `IFMVenueTypeBeacon`.
+- New property in `IFMVenue` to `outdoor` or `compassCalibration`.
+- calibration compass in indoorMapcontroller
+- Bugfixs
+
 ## 0.1.6.5
 
 - Update methods add beacon or update beacon (floorId is opcional)
@@ -20,8 +53,8 @@
 - Bugfixs
 - Update methods indoor navigation type transport
 - Change distance load data venues
-- New property in `IFIndoorMapController` to `shouldAddAreasToMap`.
-- New property in `IFIndoorMapController` to `nextNodeWarrning`.
+- New property `shouldAddAreasToMap` in `IFIndoorMapController`.
+- New property `nextNodeWarrning` in `IFIndoorMapController`.
 
 ## 0.1.6.2
 

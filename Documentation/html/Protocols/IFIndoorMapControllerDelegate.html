@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -84,9 +84,15 @@
 		
 		<option value="//api/name/indoorMapController:didLostAllBeaconsForVenue:">- indoorMapController:didLostAllBeaconsForVenue:</option>
 		
+		<option value="//api/name/indoorMapController:didStartCalibrationWithCalibrationCompassView:">- indoorMapController:didStartCalibrationWithCalibrationCompassView:</option>
+		
 		<option value="//api/name/indoorMapController:mapView:viewForAnnotation:">- indoorMapController:mapView:viewForAnnotation:</option>
 		
 		<option value="//api/name/indoorMapController:nodesInRoute:">- indoorMapController:nodesInRoute:</option>
+		
+		<option value="//api/name/indoorMapController:viewForCalibrationCompassContainer:">- indoorMapController:viewForCalibrationCompassContainer:</option>
+		
+		<option value="//api/name/indoorMapControllerCompleteCalibrationCompass:success:">- indoorMapControllerCompleteCalibrationCompass:success:</option>
 		
 	</optgroup>
 	
@@ -1015,6 +1021,193 @@ If annotation is not supported by IFINdoorMapController this method is called. T
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/indoorMapController:didStartCalibrationWithCalibrationCompassView:" title="indoorMapController:didStartCalibrationWithCalibrationCompassView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indoorMapController:didStartCalibrationWithCalibrationCompassView:">&ndash;&nbsp;indoorMapController:didStartCalibrationWithCalibrationCompassView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when starts the compass calibration</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)indoorMapController:(IFIndoorMapController *)<em>indoorMapController</em> didStartCalibrationWithCalibrationCompassView:(IFCalibrationCompassView *)<em>calibrationCompassView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indoorMapController</code></th>
+						<td><p>map controller</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>calibrationCompassView</code></th>
+						<td><p>view calibration</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when starts the compass calibration</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/indoorMapController:viewForCalibrationCompassContainer:" title="indoorMapController:viewForCalibrationCompassContainer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indoorMapController:viewForCalibrationCompassContainer:">&ndash;&nbsp;indoorMapController:viewForCalibrationCompassContainer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Custom view calibration, inherits features that allow calibration of the compass</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (IFCalibrationCompassView *)indoorMapController:(IFIndoorMapController *)<em>indoorMapController</em> viewForCalibrationCompassContainer:(IFCalibrationCompassContainerView *)<em>calibrationCompassContainer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indoorMapController</code></th>
+						<td><p>map controller</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewForCalibrationCompassContainer</code></th>
+						<td><p><a href="../Classes/IFCalibrationCompassContainerView.html">IFCalibrationCompassContainerView</a> - container view calibration</p>
+
+<p>return</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Custom view calibration, inherits features that allow calibration of the compass</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/indoorMapControllerCompleteCalibrationCompass:success:" title="indoorMapControllerCompleteCalibrationCompass:success:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indoorMapControllerCompleteCalibrationCompass:success:">&ndash;&nbsp;indoorMapControllerCompleteCalibrationCompass:success:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when the compass calibration has been completed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)indoorMapControllerCompleteCalibrationCompass:(IFIndoorMapController *)<em>indoorMapController</em> success:(BOOL)<em>success</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indoorMapController</code></th>
+						<td><p>map controller
+@param success</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when the compass calibration has been completed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFIndoorMapController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1030,10 +1223,10 @@ If annotation is not supported by IFINdoorMapController this method is called. T
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-08-06</p>
+						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-10-09</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

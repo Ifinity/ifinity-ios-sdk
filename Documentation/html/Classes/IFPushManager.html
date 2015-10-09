@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -48,6 +48,8 @@
 
 	
 	
+	<option value="tasks">Tasks</option>
+	
 	
 
 	
@@ -55,6 +57,16 @@
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addReceiveLocalNotification:">- addReceiveLocalNotification:</option>
+		
+		<option value="//api/name/addReceiveRemoteNotification:">- addReceiveRemoteNotification:</option>
+		
+		<option value="//api/name/fetchAll">- fetchAll</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -88,12 +100,163 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Notification send when new data are inserted/updated in cache database.</p>
+						<p>When you call function &ldquo;addReceiveRemoteNotification&rdquo; passing the object &ldquo;userInfo&rdquo; from its UIApplication &ldquo;didReceiveRemoteNotification&rdquo;</p>
 					</div>
 					
 					
 
 					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/fetchAll" title="fetchAll"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAll">&ndash;&nbsp;fetchAll</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>List of all places Push</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)fetchAll</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>List of all places Push</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addReceiveRemoteNotification:" title="addReceiveRemoteNotification:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addReceiveRemoteNotification:">&ndash;&nbsp;addReceiveRemoteNotification:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pass the object &ldquo;userInfo&rdquo; from its UIApplication &ldquo;didReceiveRemoteNotification&rdquo;</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addReceiveRemoteNotification:(NSDictionary *)<em>userInfo</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Pass the object &ldquo;userInfo&rdquo; from its UIApplication &ldquo;didReceiveRemoteNotification&rdquo;</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addReceiveLocalNotification:" title="addReceiveLocalNotification:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addReceiveLocalNotification:">&ndash;&nbsp;addReceiveLocalNotification:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pass the object &ldquo;UILocalNotification.userInfo&rdquo; from its UIApplication &ldquo;didReceiveLocalNotification&rdquo;</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addReceiveLocalNotification:(NSDictionary *)<em>userInfo</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Pass the object &ldquo;UILocalNotification.userInfo&rdquo; from its UIApplication &ldquo;didReceiveLocalNotification&rdquo;</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
 					
 
@@ -105,10 +268,10 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-08-06</p>
+						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-10-09</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

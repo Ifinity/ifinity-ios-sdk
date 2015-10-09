@@ -11,32 +11,11 @@
 #import "IFRouteDetails.h"
 #import "IFPolyline.h"
 
-@class IFLocationManager;
-
-/**
- *  Delegate for `IFLocationManager` class.
- */
-@protocol IFLocationManagerDelegate <NSObject>
-@optional
-/**
- *  There is a new heading from the compass. Heading is filtered using some filtering factors.
- *
- *  @param heading Most recent heading
- */
-- (void)manager:(IFLocationManager *)manager headingChanged:(float)heading;
-
-@end
-
 /**
  *  The `IFLocationManager` recives current user position and fetch nearby data (beacons, buildings). 
  *  This class helped also in presenting data on the map.
  */
 @interface IFLocationManager : NSObject
-
-/**
- *  Delegate responsible for passing all the events from the manager
- */
-@property(nonatomic, weak) id<IFLocationManagerDelegate>delegate;
 
 /**
  *  Each manager is a singleton, they are accessible by the sharedManager method

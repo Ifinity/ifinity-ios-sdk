@@ -8,12 +8,26 @@
 
 #import <MapKit/MapKit.h>
 #import "IFRouteDetails.h"
+
+typedef NS_ENUM (NSInteger, IFPolylineType) {
+    IFPolylineTypeNone = 0,
+    IFPolylineTypeCompassTranslate = 1,
+    IFPolylineTypeCompassLeastSquare = 2,
+    IFPolylineTypeCompassAll = 3
+};
+
 /**
  *  Extended Polyline view, used to get the information about each node description. Important for visually impaired.
  */
 @interface IFPolyline : MKPolyline
+
 @property (nonatomic, strong) NSArray *descriptions;
+@property (nonatomic, strong) NSArray *nodeRouteIndexs;
+@property (nonatomic, assign) IFPolylineType type;
+
 - (NSString *)descriptionAtIndex:(NSUInteger)index;
+- (NSNumber *)nodesRouteIndexAtIndex:(NSUInteger)index;
+
 /**
  *  Calculate full path lenght from current position to end of the path.
  *
@@ -23,4 +37,5 @@
  *  @return length in meters
  */
 - (CLLocationDistance)pathLenghtFromCoordinate:(CLLocationCoordinate2D)coordinate andIndex:(NSUInteger)idx;
+
 @end

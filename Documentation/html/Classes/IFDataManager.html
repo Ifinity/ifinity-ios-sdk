@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -66,6 +66,8 @@
 	
 	<optgroup label="Class Methods">
 		
+		<option value="//api/name/parserRouteModel:block:">+ parserRouteModel:block:</option>
+		
 		<option value="//api/name/sharedManager">+ sharedManager</option>
 		
 	</optgroup>
@@ -80,9 +82,51 @@
 		
 		<option value="//api/name/clearCaches">- clearCaches</option>
 		
+		<option value="//api/name/fetchAllVenuesOutdoor:type:block:">- fetchAllVenuesOutdoor:type:block:</option>
+		
+		<option value="//api/name/fetchAreasFromCacheForAreaId:block:">- fetchAreasFromCacheForAreaId:block:</option>
+		
+		<option value="//api/name/fetchAreasFromCacheForFloorId:block:">- fetchAreasFromCacheForFloorId:block:</option>
+		
+		<option value="//api/name/fetchAreasFromCacheForVenueId:block:">- fetchAreasFromCacheForVenueId:block:</option>
+		
+		<option value="//api/name/fetchAreasFromCacheForVenueId:searchText:block:">- fetchAreasFromCacheForVenueId:searchText:block:</option>
+		
+		<option value="//api/name/fetchBeaconByUUID:major:minor:block:">- fetchBeaconByUUID:major:minor:block:</option>
+		
+		<option value="//api/name/fetchContentForAreaId:backgroundNotification:block:">- fetchContentForAreaId:backgroundNotification:block:</option>
+		
+		<option value="//api/name/fetchContentForAreaId:block:">- fetchContentForAreaId:block:</option>
+		
+		<option value="//api/name/fetchContentForVenueId:block:">- fetchContentForVenueId:block:</option>
+		
+		<option value="//api/name/fetchContentFromCacheForContentId:block:">- fetchContentFromCacheForContentId:block:</option>
+		
+		<option value="//api/name/fetchFloorsFromCacheForFloorId:block:">- fetchFloorsFromCacheForFloorId:block:</option>
+		
+		<option value="//api/name/fetchFloorsFromCacheForVenueId:block:">- fetchFloorsFromCacheForVenueId:block:</option>
+		
+		<option value="//api/name/fetchPushContentFromCacheForPushContentId:block:">- fetchPushContentFromCacheForPushContentId:block:</option>
+		
+		<option value="//api/name/fetchPushFromPushId:block:">- fetchPushFromPushId:block:</option>
+		
+		<option value="//api/name/fetchVenuesFromCacheForFloorId:block:">- fetchVenuesFromCacheForFloorId:block:</option>
+		
+		<option value="//api/name/fetchVenuesFromCacheForVenueId:block:">- fetchVenuesFromCacheForVenueId:block:</option>
+		
+		<option value="//api/name/fetchVenuesFromCacheWithBlock:">- fetchVenuesFromCacheWithBlock:</option>
+		
+		<option value="//api/name/loadDataForLocation:distance:withPublicVenues:successBlock:failure:">- loadDataForLocation:distance:withPublicVenues:successBlock:failure:</option>
+		
+		<option value="//api/name/loadVenueForVenueID:successBlock:failure:">- loadVenueForVenueID:successBlock:failure:</option>
+		
 		<option value="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">- routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</option>
 		
 		<option value="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:">- routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:successBlock:failure:</option>
+		
+		<option value="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:">- routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:</option>
+		
+		<option value="//api/name/routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:">- routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:</option>
 		
 		<option value="//api/name/setClientID:secret:">- setClientID:secret:</option>
 		
@@ -558,8 +602,8 @@ Use with blocks or delegates</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:" title="routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</a></code>
+	<a name="//api/name/loadDataForLocation:distance:withPublicVenues:successBlock:failure:" title="loadDataForLocation:distance:withPublicVenues:successBlock:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadDataForLocation:distance:withPublicVenues:successBlock:failure:">&ndash;&nbsp;loadDataForLocation:distance:withPublicVenues:successBlock:failure:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -569,12 +613,12 @@ Use with blocks or delegates</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Query backend for route calculation between two points</p>
+				<p>Call API to find venues in set geo coordinates</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)routeFromFloorId:(NSNumber *)<em>fromFloorId</em> fromCoordinate:(CLLocationCoordinate2D)<em>fromCoordinate</em> toFloorId:(NSNumber *)<em>toFloorId</em> toCoordinate:(CLLocationCoordinate2D)<em>toCoordinate</em> transportType:(IFRouteType)<em>type</em> success:(void ( ^ ) ( NSDictionary *routes , CLLocationCoordinate2D endPoint ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loadDataForLocation:(CLLocation *)<em>location</em> distance:(NSNumber *)<em>distance</em> withPublicVenues:(BOOL)<em>publicVenues</em> successBlock:(void ( ^ ) ( NSArray *venues ))<em>successBlock</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
 
 		    
 			
@@ -583,33 +627,19 @@ Use with blocks or delegates</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>fromFloorId</code></th>
-						<td><p>start floor id</p></td>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>coordinate</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>fromCoordinate</code></th>
-						<td><p>start coordinate</p></td>
+						<th scope="row" class="argument-name"><code>distance</code></th>
+						<td><p>radius
+@param publicVenues</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>toFloorId</code></th>
-						<td><p>destination floor id</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>toCoordinate</code></th>
-						<td><p>destination coordinates</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>type</code></th>
-						<td><p>route type</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>success</code></th>
-						<td><p>success block, array routes filled with IFPolygon objects</p></td>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
 					</tr>
 				
 					<tr>
@@ -628,7 +658,1075 @@ Use with blocks or delegates</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Query backend for route calculation between two points</p>
+				<p>Call API to find venues in set geo coordinates</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadVenueForVenueID:successBlock:failure:" title="loadVenueForVenueID:successBlock:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadVenueForVenueID:successBlock:failure:">&ndash;&nbsp;loadVenueForVenueID:successBlock:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Call API to find venue based on venue id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadVenueForVenueID:(NSNumber *)<em>venueId</em> successBlock:(void ( ^ ) ( NSArray *venues ))<em>successBlock</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>failure block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Call API to find venue based on venue id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchVenuesFromCacheWithBlock:" title="fetchVenuesFromCacheWithBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchVenuesFromCacheWithBlock:">&ndash;&nbsp;fetchVenuesFromCacheWithBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all venues</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchVenuesFromCacheWithBlock:(void ( ^ ) ( NSArray *venues ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all venues</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAllVenuesOutdoor:type:block:" title="fetchAllVenuesOutdoor:type:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAllVenuesOutdoor:type:block:">&ndash;&nbsp;fetchAllVenuesOutdoor:type:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all venues outdoor of the type</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAllVenuesOutdoor:(BOOL)<em>outdoor</em> type:(IFMVenueType)<em>type</em> block:(void ( ^ ) ( NSArray *venues ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>venue</code></th>
+						<td><p>type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all venues outdoor of the type</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchVenuesFromCacheForVenueId:block:" title="fetchVenuesFromCacheForVenueId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchVenuesFromCacheForVenueId:block:">&ndash;&nbsp;fetchVenuesFromCacheForVenueId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch venue from venue id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchVenuesFromCacheForVenueId:(NSNumber *)<em>venueId</em> block:(void ( ^ ) ( NSArray *venues ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch venue from venue id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchVenuesFromCacheForFloorId:block:" title="fetchVenuesFromCacheForFloorId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchVenuesFromCacheForFloorId:block:">&ndash;&nbsp;fetchVenuesFromCacheForFloorId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch venue from floorplan id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchVenuesFromCacheForFloorId:(NSNumber *)<em>floorId</em> block:(void ( ^ ) ( NSArray *venues ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array venues</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch venue from floorplan id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchFloorsFromCacheForVenueId:block:" title="fetchFloorsFromCacheForVenueId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchFloorsFromCacheForVenueId:block:">&ndash;&nbsp;fetchFloorsFromCacheForVenueId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all floorplans from venue id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchFloorsFromCacheForVenueId:(NSNumber *)<em>venueId</em> block:(void ( ^ ) ( NSArray *floors ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array floorplans</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all floorplans from venue id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchFloorsFromCacheForFloorId:block:" title="fetchFloorsFromCacheForFloorId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchFloorsFromCacheForFloorId:block:">&ndash;&nbsp;fetchFloorsFromCacheForFloorId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all floorplans from floorplan id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchFloorsFromCacheForFloorId:(NSNumber *)<em>floorId</em> block:(void ( ^ ) ( NSArray *floors ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array floorplans</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all floorplans from floorplan id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAreasFromCacheForVenueId:block:" title="fetchAreasFromCacheForVenueId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAreasFromCacheForVenueId:block:">&ndash;&nbsp;fetchAreasFromCacheForVenueId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all areas from venue id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAreasFromCacheForVenueId:(NSNumber *)<em>venueId</em> block:(void ( ^ ) ( NSArray *areas ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array areas</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all areas from venue id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAreasFromCacheForFloorId:block:" title="fetchAreasFromCacheForFloorId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAreasFromCacheForFloorId:block:">&ndash;&nbsp;fetchAreasFromCacheForFloorId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all areas from floorplan id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAreasFromCacheForFloorId:(NSNumber *)<em>floorId</em> block:(void ( ^ ) ( NSArray *areas ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array areas</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all areas from floorplan id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAreasFromCacheForAreaId:block:" title="fetchAreasFromCacheForAreaId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAreasFromCacheForAreaId:block:">&ndash;&nbsp;fetchAreasFromCacheForAreaId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all areas from area id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAreasFromCacheForAreaId:(NSNumber *)<em>areaId</em> block:(void ( ^ ) ( NSArray *areas ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array areas</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all areas from area id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchAreasFromCacheForVenueId:searchText:block:" title="fetchAreasFromCacheForVenueId:searchText:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchAreasFromCacheForVenueId:searchText:block:">&ndash;&nbsp;fetchAreasFromCacheForVenueId:searchText:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all areas when name CONTAINS search text</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchAreasFromCacheForVenueId:(NSNumber *)<em>venueId</em> searchText:(NSString *)<em>searchText</em> block:(void ( ^ ) ( NSArray *areas ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>search</code></th>
+						<td><p>text</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array areas</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all areas when name CONTAINS search text</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchContentFromCacheForContentId:block:" title="fetchContentFromCacheForContentId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchContentFromCacheForContentId:block:">&ndash;&nbsp;fetchContentFromCacheForContentId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch all contents from content id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchContentFromCacheForContentId:(NSNumber *)<em>contentId</em> block:(void ( ^ ) ( NSArray *contents ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array contents</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch all contents from content id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchContentForAreaId:block:" title="fetchContentForAreaId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchContentForAreaId:block:">&ndash;&nbsp;fetchContentForAreaId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch content from area id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchContentForAreaId:(NSNumber *)<em>areaId</em> block:(void ( ^ ) ( IFMContent *content ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, object content</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch content from area id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchContentForAreaId:backgroundNotification:block:" title="fetchContentForAreaId:backgroundNotification:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchContentForAreaId:backgroundNotification:block:">&ndash;&nbsp;fetchContentForAreaId:backgroundNotification:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch content from area id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchContentForAreaId:(NSNumber *)<em>areaId</em> backgroundNotification:(BOOL)<em>notification</em> block:(void ( ^ ) ( IFMContent *content ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, object content</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>backgroundNotification</code></th>
+						<td><p>notification in background</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch content from area id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchContentForVenueId:block:" title="fetchContentForVenueId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchContentForVenueId:block:">&ndash;&nbsp;fetchContentForVenueId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch content from venue id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchContentForVenueId:(NSNumber *)<em>venueId</em> block:(void ( ^ ) ( IFMContent *content ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, object content</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch content from venue id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchBeaconByUUID:major:minor:block:" title="fetchBeaconByUUID:major:minor:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchBeaconByUUID:major:minor:block:">&ndash;&nbsp;fetchBeaconByUUID:major:minor:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch beacon based on parameters</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchBeaconByUUID:(NSUUID *)<em>uuid</em> major:(NSInteger)<em>major</em> minor:(NSInteger)<em>minor</em> block:(void ( ^ ) ( IFMBeacon *beacon ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, object beacon</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch beacon based on parameters</p>
+
+<p>@param uuid
+@param major
+@param minor</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchPushFromPushId:block:" title="fetchPushFromPushId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchPushFromPushId:block:">&ndash;&nbsp;fetchPushFromPushId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch push from push id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchPushFromPushId:(NSNumber *)<em>pushId</em> block:(void ( ^ ) ( IFMPush *push ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, object push</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch push from push id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchPushContentFromCacheForPushContentId:block:" title="fetchPushContentFromCacheForPushContentId:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchPushContentFromCacheForPushContentId:block:">&ndash;&nbsp;fetchPushContentFromCacheForPushContentId:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch pushContent from pushContent id</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchPushContentFromCacheForPushContentId:(NSNumber *)<em>pushContentId</em> block:(void ( ^ ) ( NSArray *pushContents ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>successBlock</code></th>
+						<td><p>success block, array pushContents</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch pushContent from pushContent id</p>
 			</div>
 			
 
@@ -733,6 +1831,333 @@ Use with blocks or delegates</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:" title="routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toFloorId:toCoordinate:transportType:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query backend for route calculation between two points</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeFromFloorId:(NSNumber *)<em>fromFloorId</em> fromCoordinate:(CLLocationCoordinate2D)<em>fromCoordinate</em> toFloorId:(NSNumber *)<em>toFloorId</em> toCoordinate:(CLLocationCoordinate2D)<em>toCoordinate</em> transportType:(IFRouteType)<em>type</em> success:(void ( ^ ) ( IFRouteModel *route ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromFloorId</code></th>
+						<td><p>start floor id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromCoordinate</code></th>
+						<td><p>start coordinate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toFloorId</code></th>
+						<td><p>destination floor id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toCoordinate</code></th>
+						<td><p>destination coordinates</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>route type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>success block, object <a href="../Classes/IFRouteModel.html">IFRouteModel</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>failure block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query backend for route calculation between two points</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:" title="routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toFloorId:toVenueId:toCoordinate:transportType:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query backend for route segment calculation between two points</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeFromFloorId:(NSNumber *)<em>fromFloorId</em> fromCoordinate:(CLLocationCoordinate2D)<em>fromCoordinate</em> toFloorId:(NSNumber *)<em>toFloorId</em> toVenueId:(NSNumber *)<em>toVenueId</em> toCoordinate:(CLLocationCoordinate2D)<em>toCoordinate</em> transportType:(IFRouteType)<em>type</em> success:(void ( ^ ) ( NSArray *segments ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromFloorId</code></th>
+						<td><p>start floor id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromCoordinate</code></th>
+						<td><p>start coordinate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toFloorId</code></th>
+						<td><p>destination floor id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toVenueId</code></th>
+						<td><p>destination venue id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toCoordinate</code></th>
+						<td><p>destination coordinates</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>route type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>success block, array segments route</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>failure block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query backend for route segment calculation between two points</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:" title="routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:">&ndash;&nbsp;routeFromFloorId:fromCoordinate:toVenueId:transportType:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query backend for route segment calculation between two points</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeFromFloorId:(NSNumber *)<em>fromFloorId</em> fromCoordinate:(CLLocationCoordinate2D)<em>fromCoordinate</em> toVenueId:(NSNumber *)<em>toVenueId</em> transportType:(IFRouteType)<em>type</em> success:(void ( ^ ) ( NSArray *segments ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromFloorId</code></th>
+						<td><p>start floor id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromCoordinate</code></th>
+						<td><p>start coordinate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toVenueId</code></th>
+						<td><p>destination venue id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>route type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>success block, array segments route</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>failure block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query backend for route segment calculation between two points</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parserRouteModel:block:" title="parserRouteModel:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parserRouteModel:block:">+&nbsp;parserRouteModel:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Parser objects <a href="../Classes/IFRouteModel.html">IFRouteModel</a>, return route as MKPolyline, all Nodes divided into floors and the end point</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)parserRouteModel:(IFRouteModel *)<em>route</em> block:(void ( ^ ) ( NSDictionary *routes , NSDictionary *floorNodes , CLLocationCoordinate2D endPoint ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>route</code></th>
+						<td><p>route object MKPolyline</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>success block, all routes, all floors nodes, end point coordinate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Parser objects <a href="../Classes/IFRouteModel.html">IFRouteModel</a>, return route as MKPolyline, all Nodes divided into floors and the end point</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IFDataManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -748,10 +2173,10 @@ Use with blocks or delegates</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-08-06</p>
+						<p class="copyright">Copyright &copy; 2015 Ifinity. All rights reserved. Updated: 2015-10-09</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

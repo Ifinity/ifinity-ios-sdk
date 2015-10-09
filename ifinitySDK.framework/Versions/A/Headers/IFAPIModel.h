@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "IFLocation.h"
 #import "IFMPush.h"
+#import "IFMVenue.h"
+#import "IFMContent.h"
 
 @class IFContentModel;
 @class IFImageModel;
@@ -17,6 +19,7 @@
 
 @property (nonatomic, strong) NSNumber *venueId;
 @property (nonatomic, strong) NSNumber *publicVenue;
+@property (nonatomic, strong) NSNumber *compassCalibration;
 @property (nonatomic, strong) NSNumber *outdoor;
 @property (nonatomic, strong) NSNumber *updateTime;
 @property (nonatomic, strong) CLLocation *centerLocation;
@@ -25,8 +28,9 @@
 @property (nonatomic, strong) IFImageModel *image;
 @property (nonatomic, strong) IFContentModel *content;
 @property (nonatomic, strong) NSArray *beacons;
+@property (nonatomic, strong) NSArray *pushContents;
 @property (nonatomic, strong) NSString *ibeaconUUID;
-@property (nonatomic, strong) NSString *venueType;
+@property (nonatomic, assign) IFMVenueType venueType;
 
 @end
 
@@ -79,11 +83,12 @@ typedef NS_ENUM (NSInteger, IFFloorplanTileStatus) {
 @interface IFContentModel : NSObject
 
 @property (nonatomic, retain) NSNumber *contentId;
-@property (nonatomic, retain) NSString *content;
+@property (nonatomic, retain) NSString *contentShort;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSNumber *notification;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) IFImageModel *icon;
+@property (nonatomic, assign) IFMContentType type;
 
 @end
 
@@ -128,9 +133,16 @@ typedef NS_ENUM (NSInteger, IFFloorplanTileStatus) {
 
 @end
 
+typedef NS_ENUM(NSInteger, IFRouteSegmentType) {
+    IFRouteSegmentTypeIndoorNavigation = 0,
+    IFRouteSegmentTypeExternal = 1
+};
+
 @interface IFRouteModel : NSObject
 
 @property (nonatomic, strong) NSArray *nodes;
+@property (nonatomic) IFRouteSegmentType type;
+@property (nonatomic, strong) NSNumber *venueId;
 
 @end
 
@@ -175,5 +187,14 @@ typedef NS_ENUM (NSInteger, IFFloorplanTileStatus) {
 @property (nonatomic, retain) NSNumber * update_time;
 @property (nonatomic, retain) NSNumber * background_mode;
 @property (nonatomic, retain) NSString * background_url;
+
+@end
+
+@interface IFPushContentModel : NSObject
+
+@property (nonatomic, retain) NSNumber * remote_id;
+@property (nonatomic, retain) NSNumber * from;
+@property (nonatomic, retain) NSNumber * to;
+@property (nonatomic, strong) IFContentModel *content;
 
 @end

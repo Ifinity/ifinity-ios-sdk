@@ -59,6 +59,7 @@
  *
  */
 @interface IFIndoorLocationManager : NSObject
+
 @property (nonatomic, weak) id<IFIndoorLocationManagerDelegate> delegate;
 
 /**
@@ -93,6 +94,11 @@
  */
 - (void)stopCheckingAreas;
 
-
+/**
+ *  Current area base on position
+ *
+ *  @return area model object
+ */
 - (IFMArea *)currentArea;
+
 @end

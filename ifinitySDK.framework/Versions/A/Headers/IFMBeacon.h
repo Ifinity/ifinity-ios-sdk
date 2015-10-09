@@ -2,7 +2,7 @@
 //  IFMBeacon.h
 //  ifinitySDK
 //
-//  Created by GetIfinity on 09.04.2015.
+//  Created by Mario on 08.09.2015.
 //  Copyright (c) 2015 GetIfinity. All rights reserved.
 //
 
@@ -29,6 +29,7 @@
 @property (nonatomic, retain) IFMVenue *venue;
 
 - (CLLocation *)location;
+
 @end
 
 @interface IFMBeacon (CoreDataGeneratedAccessors)

@@ -11,6 +11,9 @@
 #import "IFMFloorplan+helper.h"
 #import "IFTransmitter.h"
 
+#pragma mark
+#pragma mark - IFBluetoothManagerDelegate
+
 @class IFBluetoothManager;
 
 /**
@@ -111,6 +114,8 @@
 
 @end
 
+#pragma mark
+#pragma mark - IFBluetoothManager
 
 /**
  *  'IFBluetoothManager' provide interface for bluetooth operations.
@@ -190,5 +195,15 @@
  */
 - (void)stopVirtualBeacon;
 
+/**
+ *  Set the name of the beacon that will cause output from the venue.
+ *  @param name out beacon name
+ */
 - (void)setOutsideBeaconName:(NSString *)name;
+
+#pragma mark
+#pragma mark - CLLocationManagerDelegate methods
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
 @end

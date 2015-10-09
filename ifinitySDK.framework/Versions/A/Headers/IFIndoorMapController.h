@@ -11,6 +11,8 @@
 #import "IFMFloorplan.h"
 #import "IFMVenue.h"
 #import "IFDataManager.h"
+#import "IFCalibrationCompassContainerView.h"
+#import "IFCalibrationCompassView.h"
 
 @class IFIndoorMapController;
 
@@ -138,6 +140,32 @@
  */
 - (MKAnnotationView *)indoorMapController:(IFIndoorMapController *)indoorMapController mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation> )annotation __attribute__((deprecated));
 
+/**
+ *  Called when starts the compass calibration
+ *
+ *  @param indoorMapController    map controller
+ *  @param calibrationCompassView    view calibration
+ */
+- (void)indoorMapController:(IFIndoorMapController *)indoorMapController didStartCalibrationWithCalibrationCompassView:(IFCalibrationCompassView *)calibrationCompassView;
+
+/**
+ *  Custom view calibration, inherits features that allow calibration of the compass
+ *
+ *  @param indoorMapController    map controller
+ *  @param viewForCalibrationCompassContainer IFCalibrationCompassContainerView - container view calibration
+ *
+ *  return
+ */
+- (IFCalibrationCompassView *)indoorMapController:(IFIndoorMapController *)indoorMapController viewForCalibrationCompassContainer:(IFCalibrationCompassContainerView *)calibrationCompassContainer;
+
+/**
+ *  Called when the compass calibration has been completed
+ *
+ *  @param indoorMapController    map controller
+ *  @param success
+ */
+- (void)indoorMapControllerCompleteCalibrationCompass:(IFIndoorMapController *)indoorMapController success:(BOOL)success;
+
 @end
 
 
@@ -184,6 +212,14 @@
  *  Current user location calclutated with indoor navigation module.
  */
 @property (nonatomic, assign, readonly) CLLocationCoordinate2D userCoordinate;
+/**
+ *  Current user target location calclutated with indoor navigation module. Only is target navigation.
+ */
+@property (nonatomic, assign, readonly) CLLocationCoordinate2D userTargetCoordinate;
+/**
+ *  Turn off icon of the current location during navigation
+ */
+@property (nonatomic, assign) BOOL hideTruePositionWhenNavigating;
 
 /**
  *  Initialize map view with location manager and set self as manager delegate.
@@ -204,6 +240,7 @@
  *  Stop indoor navigation
  */
 - (void)stop;
+
 /**
  *  Calculate and start navigation to area
  *
@@ -232,7 +269,7 @@
  *
  *  @return nil if no navigation, area model if navigation in progress
  */
-- (IFMArea *)navigateArea;
+- (IFMArea *)navigateArea __attribute__((deprecated));
 /**
  *  Enable map rotation based on heading
  *

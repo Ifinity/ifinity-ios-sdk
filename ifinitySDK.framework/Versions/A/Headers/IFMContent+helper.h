@@ -15,5 +15,7 @@
                             areaID:(NSNumber *)areaID
                               name:(NSString *)name
               managedObjectContext:(NSManagedObjectContext *)context;
-- (NSString *) getContentURL;
+- (NSString *)getContentURL;
+- (BOOL)validateContent;
+
 @end

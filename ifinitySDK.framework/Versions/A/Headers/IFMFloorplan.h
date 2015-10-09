@@ -1,9 +1,9 @@
 //
 //  IFMFloorplan.h
-//  Pods
+//  ifinitySDK
 //
-//  Created by Mario on 01/07/15.
-//
+//  Created by Mario on 28.07.2015.
+//  Copyright (c) 2015 GetIfinity. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@
 
 @interface IFMFloorplan : NSManagedObject
 
-@property (nonatomic, retain) NSString * label;
+@property (nonatomic, retain) NSNumber * label;
 @property (nonatomic, retain) NSString * map_id;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * nelat;
@@ -26,8 +26,8 @@
 @property (nonatomic, retain) NSNumber * venue_id;
 @property (nonatomic, retain) NSSet *areas;
 @property (nonatomic, retain) NSSet *beacons;
-@property (nonatomic, retain) IFMVenue *venue;
 @property (nonatomic, retain) IFMFloorplanPoint *point;
+@property (nonatomic, retain) IFMVenue *venue;
 @end
 
 @interface IFMFloorplan (CoreDataGeneratedAccessors)
