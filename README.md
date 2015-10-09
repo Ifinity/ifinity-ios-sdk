@@ -13,7 +13,7 @@ pod 'IfinitySDK'
 
 If you want to install IfinitySDK manually, you need to follow these steps:
 
-1. Add following frameworks to your project: 'MapKit', 'CoreLocation', 'CoreData', 'Security', 'CoreBluetooth', 'libz'
+1. Add following frameworks to your project: 'MapKit', 'CoreLocation', 'CoreData', 'Security', 'CoreBluetooth', 'libz', 'sqlite3'
 2. Drag `ifinitySDK.framework` to the Framework's group of your project. Make sure "Copy items into destination group's folder" is selected.
 3. Right-click 'ifinitySDK.framework' in your project, and select Show In Finder.
 4. Drag the ifinityDB.bundle and ifinityImages.bundle from the Resources folder to your project. We suggest putting it into the Frameworks group. Make sure "Copy items into destination group's folder" is not selected.
