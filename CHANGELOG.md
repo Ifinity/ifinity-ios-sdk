@@ -1,3 +1,7 @@
+## 0.1.7.1
+
+- Critical bugfix indoor map controller 
+
 ## 0.1.7.0
 
 - update ios9

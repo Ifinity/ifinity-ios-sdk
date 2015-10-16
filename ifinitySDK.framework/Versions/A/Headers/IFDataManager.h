@@ -19,6 +19,7 @@
  *  Notification send when new data are inserted/updated in cache database.
  */
 extern NSString * const IFDataManagerNotificationVenuesUpdate;
+extern NSString * const IFDataManagerNotificationVenueUpdate;
 extern NSString * const IFDataManagerNotificationCacheClear;
 
 /**

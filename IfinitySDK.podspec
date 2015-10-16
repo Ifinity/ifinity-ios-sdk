@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name = 'IfinitySDK'
-  s.version = '0.1.7.0'
+  s.version = '0.1.7.1'
   s.platform = :ios, '8.0'
-  s.source = { :git => 'https://github.com/Ifinity/ifinity-ios-sdk.git', :tag => '0.1.7.0' }
+  s.source = { :git => 'https://github.com/Ifinity/ifinity-ios-sdk.git', :tag => '0.1.7.1' }
   s.summary = 'iOS sdk for ifinity beacons'
   s.homepage = 'http://getifinity.com'
   s.vendored_frameworks = 'ifinitySDK.framework'
