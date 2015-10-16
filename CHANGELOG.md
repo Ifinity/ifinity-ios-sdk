@@ -1,3 +1,9 @@
+## 0.1.7.0
+
+- update ios9
+- bugfix compass calibrated
+- Notification update venue or complete update load venues
+
 ## 0.1.6.7
 
 - update changelog
