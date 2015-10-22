@@ -1,3 +1,7 @@
+## 0.1.7.2
+
+- bugfix xcode 7 static library warnings
+
 ## 0.1.7.1
 
 - Critical bugfix indoor map controller 
