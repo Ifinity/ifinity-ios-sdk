@@ -254,4 +254,7 @@ If you want to handle background push notifications, you will need to add some a
 
 ## Sample project
 
-Project described above will be available shortly on our github account
+There are two projects on our github account, that should help you start with our SDK, you will find them below for both Swift and Objective-C. 
+
+- Swift: https://github.com/Ifinity/ifinity-swift-example 
+- Objective-C: https://github.com/Ifinity/ifinity-objc-example
